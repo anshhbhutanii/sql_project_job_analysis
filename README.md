@@ -4,8 +4,6 @@
 
 A SQL portfolio project exploring salary trends, skill demand, and hiring patterns in the remote Data Analyst job market using a real-world dataset containing over **3 million** job posting records.
 
-> **Note:** The original `job_postings_fact.csv` dataset (~123 MB) is not included in this repository because it exceeds GitHub's standard file size limit. The dataset was imported locally into PostgreSQL and used throughout the analysis.
-
 # 📖 Introduction
 
 Every day, thousands of companies post job openings for Data Analysts—but which skills actually lead to better salaries and stronger career opportunities?
@@ -40,30 +38,39 @@ This project combines SQL, database management, version control, and documentati
 
 ## 📁 Project Structure
 
-The repository is organized into dedicated folders for datasets and SQL scripts, making the project easy to navigate, maintain, and extend.
+The repository is organized into dedicated folders for datasets, database setup scripts, SQL queries, and project visualizations.
 
 ```text
-sql_practice_job/
+sql_project_job_analysis/
 │
 ├── 📄 README.md
+├── 📄 .gitignore
+│
+├── 📂 assets
+│   └── 📂 screenshots
+│       ├── highest_paying_skills.png
+│       ├── optimal_skills.png
+│       ├── top_demanded_skills.png
+│       ├── top_paying_job_skills.png
+│       └── top_paying_jobs.png
 │
 ├── 📂 csv_files
-│   ├── job_postings_fact.csv
+│   ├── company_dim.csv
 │   ├── skills_dim.csv
 │   └── skills_job_dim.csv
 │
-├── 📂 sql_load
-│   ├── 1_top_paying_jobs.sql
-│   ├── 2_top_paying_job_skills.sql
-│   ├── 3_top_demanded_skills.sql
-│   ├── 4_top_paying_skills.sql
-│   ├── 5_optimal_skills.sql
-│   ├── optimal_skill.csv
-│   ├── 1_create_database.sql
-│   ├── 2_create_tables.sql
-│   └── 3_modify_tables.sql
-│
-└── 📄 .gitignore
+└── 📂 sql_load
+    ├── 1_create_database.sql
+    ├── 2_create_tables.sql
+    ├── 3_modify_tables.sql
+    │
+    └── 📂 project_queries
+        ├── 1_top_paying_jobs.sql
+        ├── 2_top_paying_job_skills.sql
+        ├── 3_top_demanded_skills.sql
+        ├── 4_top_paying_skills.sql
+        ├── 5_optimal_skills.sql
+        └── optimal_skill.csv
 ```
 
 ### 📌 Repository Organization
@@ -300,3 +307,10 @@ While this project focuses on SQL-based analysis, there are several opportunitie
 - Analyze additional job roles such as Data Scientist and Data Engineer.
 - Perform trend analysis across different industries and geographic regions.
 - Develop an end-to-end data pipeline for automated reporting.
+
+
+### 📚 Dataset Source
+
+The dataset used in this project was provided as part of Luke Barousse's SQL for Data Analytics course and is used for educational and portfolio purposes.
+
+> **Note:** The original `job_postings_fact.csv` file is not included because its size exceeds GitHub's standard file limit. It was imported locally into PostgreSQL and used throughout the analysis.
